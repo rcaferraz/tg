@@ -1,0 +1,132 @@
+Métodos de combate à vigilância e censura governamental na Internet
+
+Por Rodolfo Ferraz
+
+-Motivação
+Great Firewall of China, Solicitação de dados de usuários pelo governo (Google transparency report),
+Benefícios em garantir livre acesso à informação:
+	Em Recife/Brasil:
+		Aumento na participação popular na política, graças ao facebook
+	No mundo:
+		Libertação do Egito, Irã, etc.
+
+http://donttrack.us/
+https://www.eff.org/
+https://www.google.com/transparencyreport/userdatarequests/
+http://en.wikipedia.org/wiki/Internet_censorship_in_the_People's_Republic_of_China
+http://www.publicproxyservers.com/
+http://www.greatfirewallofchina.org/
+http://www.vanishingrights.com/
+https://www.google.com/intl/en/takeaction/?utm_source=social&utm_medium=facebook&utm_campaign=122012freeandopen_ty
+
+Palavras-chave (buscar no google): internet surveillance, internet censorship
+
+"""
+Desde a popularização das redes sociais é perceptível que a população vem se tornando mais atuante politicamente. Através de Facebook e Twitter, vemos mobilizações feitas por e a favor da população, coisa que não acontecia antes desta popularização. A inércia já é coisa do passado, e não se depende mais de meios de comunicação em massa controlados, como jornais, rádio e televisão, que omitem ou veiculam notícias com vieses de acordo com seus interesses. Quem cria as notícias são a própria população, cada um com sua perspectiva, e desta forma, conseguimos nos aproximar da realidade, e não mais uma realidade maquiada, como nos era apresentada pelos meios televisivos, que esperançosamente venham a se tornar obsoletos.
+
+Este novo grau de comunicação deve ser sempre garantido a todas as nações e todas as classes sociais, independente das vontades governamentais, a fim de garantir a evolução social. Logo, deve-se estudar formas de projetar a rede mundial a fim de tornar impossível quaisquer censuras ou formas de coibir a comunicação entre as pessoas.
+"""
+
+"""
+Há movimentos para atualizar as leis, a fim de tornar ilegal algumas práticas governamentais. Sabe-se que a sociedade caminha a passos mais lentos que a evolução da tecnologia, e preferivelmente devemos optar por soluções tecnológicas, sobre soluções legislativas, uma vez que um computador seguindo um programa é muito mais eficaz, uma vez que não falha no cumprimento do seu código/lei, nem pode ser corrompido.
+"""
+
+--
+TEDxToronto 2012 Talk - Ronald J. Deibert
+http://www.youtube.com/watch?v=XDgH0FshUXI
+
+As pessoas utilizam a tecnologia sem conhecer ou se interessar em como ela funciona por baixo. Não sabem onde seus dados, e-mails e informações pessoais trafegam, muito menos quem tem acesso a elas. Muitos acreditam que seus dados estão guardados a sete chaves, e só eles têm acesso, ou que o grupo de pessoas que têm acesso às suas informações é tão restrito e distante, e a quantidade de pessoas conectadas é tão grande, que seria muito improvável que alguém decidisse espiar seus dados.
+
+Max Shrimps austrian law student.
+
+Chinese version of skype. Algumas palavras sumiam do chat do skype. Front page of business section of ny times 2008.
+
+Botnets, spyware,.. alguns governos estão olhando para o mundo do cibercrime como uma oportunidade estratégica para repressão política e espionagem.
+
+Ghost net report. Dalai Lama's Office. Ghost rat. DIY Cyber spionage.
+
+Samuel coal, what begins in fear usually ends in fallee.
+
+Os ISPs se comunicam através de IXPs.
+http://en.wikipedia.org/wiki/Internet_exchange_point
+
+"Surf Safely! Thi website is not accessible in the UAE."
+
+H.G. Wells "The whole human memory can be, and probably in a short time will be, made accessible to every individual... It need not be concentrated in any one single place. It need not be vulnerable as a human head or a human heart is vulnerable. It can be reproduced exactly and fully, in Peru, China, Iceland, Central Africa, or wherever else seems to afford an insurance against danger and interruption. It can have at once, the concentration of a craniate animal and the diffused vitality of an amoeba."
+https://sherlock.ischool.berkeley.edu/wells/world_brain.html
+
+Décio Sá, blogueiro maranhense assassinado devido a denúncias então publicadas em seu blog, ligando um grupo de agiotas a um assassinato no Piauí. http://www.blogdodecio.com.br/
+http://g1.globo.com/ma/maranhao/noticia/2013/04/acusados-de-morte-de-decio-sa-trocam-acusacoes-em-acariacao.html
+
+--
+--
+WRR-Lecture 2012 - Ron Deibert - The Global Battle for the Future of Cyberspace - met debat
+http://www.youtube.com/watch?v=27dU6lseHT8
+
+Citizen Lab
+University of Toronto
+https://citizenlab.org/
+
+OpenNet Initiative
+http://opennet.net/
+
+Tunisya, Aegypt, Libya
+
+Wireless Carrier Sprint
+110 eletronics surveillance team couldn't keep up the surveillance
+So Sprint developed a website to automate the process.
+law enforcement agents 8 million times accessed the system developed by Sprint in a single year
+
+rely on products and services developed by western companies: Smart Filter iran 2005, FortNet berma 2006, WebSense yemen, tunisia, UAE in 2008 and 2009. All companies HQ in Silicon Valley.
+
+Websense said they no longer sell their services to these countries.
+
+Bluecoat in syria and berma.
+
+Finphisher: bahrain, turcomenistan, tunisya, brunei
+
+oct 2012: Bloomberg news: hacking team (italy), computer intrusion kits to United Arabamas government.
+
+--
+
+-Métodos de vigilância
+
+-Métodos de censura
+
+Introdução
+	Censura nos diversos meios de comunicação
+		Em veículos como jornais, rádio, televisão, onde o conteúdo é controlado pelo dono da empresa, a censura pode se dar através de troca de favores entre a empresa e o governo. Caso não exista esse tipo de parceria entre o veículo e o governo, a censura pode ser feita de forma arbitrária, punindo o veículo, caso não obedeça a ordem remover algum conteúdo.
+		Em alguns casos, a censura não é demandada pelo governo, mas por entidades particulares como outras grandes empresas, ou pessoas físicas com grande influência. Em Recife há o caso JCPM x Moura Dubeux que andam de mãos dadas em empreendimentos imobiliários e outros casos.
+		Com a chegada da Internet, os meios de comunicação massiva não são mais exclusividade de poucos. Qualquer um tem capacidade de compartilhar uma informação e alcançar milhões de pessoas.
+		Com esta mudança, passam a surgir situações de censura na Internet, seja demandada pelo governo, seja demandada por entidades particulares. No caso de censura demandada pelo governo (influenciado por entidades particulares ou não), a situação pode ser mais grave, pois muitas vezes os provedores de internet são concessão do governo e este pode controlá-los.
+
+	1. Controle de mecanismos de busca através do judiciário
+	inserir referências do governo brasileiro censurando o Google/Youtube através de juízes
+	algumas censuras são para garantir direito dos cidadãos, vide caso Caroline Dieckmann e caso Daniella Cicarelli. Outras, para benefício próprio, vide 
+http://www.pragmatismopolitico.com.br/2013/03/google-devera-remover-textos-e-videos-que-ofendam-deputados.html
+
+http://www.estadao.com.br/noticias/geral,protestos-nas-redes-sociais-vao-parar-na-justica,1033423,0.htm
+
+-Métodos para evitar a vigilância (anonimidade)
+
+-Métodos para burlar a censura
+http://www.howcast.com/videos/90601-How-to-Circumvent-an-Internet-Proxy
+**
+Search: open public proxy
+Colocar IP nas configurações do browser
+Requisita conteúdo através do proxy.
+Contras: pode registrar sua localização ou seu computador e os sites que você visitou. pode ser inclusive uma armadilha para pegar pessoas que querem burlar a censura.
+**
+
+**
+Web proxy
+**
+
+**
+tunneling or anonimizing software
+**
+
+elgoog
+
+
+**
