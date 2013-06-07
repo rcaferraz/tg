@@ -1,0 +1,19 @@
+61 Blue Coat ProxySG: 11 em redes públicas ou do governo
+	Egito, Kuwait, Qatar, Arábia Saudita, Emirados Árabes Unidos
+316 Blue Coat PacketShaper: 50 em redes públicas ou do governo
+	Afghanistan, Bahrain, China, India, Indonesia, Iraq, Kenya, Kuwait, Lebanon, 
+Malaysia, Nigeria, Qatar, Russia, Saudi Arabia, South Korea, Singapore, Thailand, Turkey, and 
+Venezuela.
+
+
+ProxySG possui WebFilter, que categoriza páginas Web para permitir filtragem de conteúdo indesejado.
+
+http://www.bluecoat.com/products/packetshaper
+Monitora e Controla tráfego por aplicação ou conteúdo web. Em ambientes corporativos, pode até ser integrado ao Active Directory e detalhar o tráfego de cada usuário.
+
+Em 2011, pesquisadores encontraram evidência que produtos da Blue Coat estavam sendo usados na Síria, como parte do aparato de filtragem e monitoramento de rede. É um exemplo de serviço com dupla possibilidade de utilização, uma para propósitos legítimos, outra para propósitos que resultam em impactos em direitos humanos.
+
+Evidências do uso de dispositivos Blue Coat: http://citizenlab.org/2011/11/behind-blue-coat/
+
+Aqui, usando dispositivos da Cisco, nas vésperas das eleições Iranianas. Usou-se nmap para verificar o tipo do dispositivo, e também um telnet:
+http://reflets.info/la-cybercensure-iranienne-vue-de-linterieure-a-la-veille-des-elections-presidentielles-powered-by-cisco-systems/
