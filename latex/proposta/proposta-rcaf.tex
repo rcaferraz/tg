@@ -78,7 +78,7 @@
 % Opção: [f] - para orientador do sexo feminino
 % e.g. \coadviser{Prof. Dr. Pedro Pedreira}
 % Comente se não se aplicar
-\coadviser{NOME DO(DA) CO-ORIENTADOR(A)}
+%\coadviser{NOME DO(DA) CO-ORIENTADOR(A)}
 
 %% Inicio do documento
 \begin{document}
@@ -94,18 +94,18 @@
 
 % Portada (apresentação)
 % Comente para ocultar
-\presentationpage
+%\presentationpage
 
 % Dedicatória
 % Comente para ocultar
-\begin{dedicatory}
-<DIGITE A DEDICATÒRIA AQUI>
-\end{dedicatory}
+%\begin{dedicatory}
+%<DIGITE A DEDICATÒRIA AQUI>
+%\end{dedicatory}
 
 % Agradecimentos
 % Se preferir, crie um arquivo à parte e o inclua via \include{}
-\acknowledgements
-<DIGITE OS AGRADECIMENTOS AQUI>
+%\acknowledgements
+%<DIGITE OS AGRADECIMENTOS AQUI>
 
 % Epígrafe
 % Comente para ocultar
@@ -116,26 +116,26 @@
 %  Ouro nativo, que, na ganga impura,\\
 %  A bruta mina entre os cascalhos vela.
 %  \end{epigraph}
-\begin{epigraph}[<NOTA>]{<AUTOR>}
-<DIGITE AQUI A CITAÇÂO>
-\end{epigraph}
+%\begin{epigraph}[<NOTA>]{<AUTOR>}
+%<DIGITE AQUI A CITAÇÂO>
+%\end{epigraph}
 
 % Resumo em Português
 % Se preferir, crie um arquivo à parte e o inclua via \include{}
-\resumo
-<DIGITE O RESUMO AQUI>
+%\resumo
+% texto do resumo
 % Palavras-chave do resumo em Português
-\begin{keywords}
-<DIGITE AS PALAVRAS-CHAVE AQUI>
-\end{keywords}
+%\begin{keywords}
+%censura, vigilância, segurança, privacidade, anonimidade, internet, direitos humanos
+%\end{keywords}
 
 % Resumo em Inglês
 % Se preferir, crie um arquivo à parte e o inclua via \include{}
-\abstract
+%\abstract
 % Palavras-chave do resumo em Inglês
-\begin{keywords}
-<DIGITE AS PALAVRAS-CHAVE AQUI>
-\end{keywords}
+%\begin{keywords}
+%<DIGITE AS PALAVRAS-CHAVE AQUI>
+%\end{keywords}
 
 % Sumário
 % Comente para ocultar
@@ -143,11 +143,11 @@
 
 % Lista de figuras
 % Comente para ocultar
-\listoffigures
+%\listoffigures
 
 % Lista de tabelas
 % Comente para ocultar
-\listoftables
+%\listoftables
 
 
 
@@ -160,11 +160,13 @@
 % "capitulo1.tex", "capitulo2.tex", ... "capituloN.tex" e depois
 % incluí-los com:
 % \include{capitulo1}
+% \include{capitulo1}
 % \include{capitulo2}
 % ...
 % \include{capituloN}
-
-
+\include{capitulos/contexto}
+\include{capitulos/objetivos}
+\include{capitulos/assinaturas}
 
 %%
 %% Parte pós-textual
@@ -173,7 +175,7 @@
 
 % Apêndices
 % Comente se não houver apêndices
-\appendix
+%\appendix
 
 % É aconselhável criar cada apêndice em um arquivo à parte, digamos
 % "apendice1.tex", "apendice.tex", ... "apendiceM.tex" e depois
