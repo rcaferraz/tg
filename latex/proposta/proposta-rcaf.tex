@@ -26,6 +26,8 @@
 %% Preâmbulo:
 %% coloque aqui o seu preâmbulo LaTeX, i.e., declaração de pacotes,
 %% (re)definições de macros, medidas, etc.
+\usepackage{paralist} % Usado para listas "compactenum"
+\usepackage{placeins} % Usado para \FloatBarrier (impede que uma table flutue após a barreira estabelecida)
 
 %% Identificação:
 
@@ -63,7 +65,7 @@
 
 % Data da defesa
 % e.g. \date{19 de fevereiro de 2003}
-\date{<DATA DA DEFESA>}
+\date{Junho de 2013}
 
 % Autor
 % e.g. \author{José da Silva}
@@ -166,6 +168,7 @@
 % \include{capituloN}
 \include{capitulos/contexto}
 \include{capitulos/objetivos}
+\include{capitulos/cronograma}
 \include{capitulos/assinaturas}
 
 %%
@@ -192,7 +195,7 @@
 % BibTeXpress em www.cin.ufpe.br/~paguso/bibtexpress
 \nocite{*}
 \bibliographystyle{alpha}
-\bibliography{biblio}
+\bibliography{capitulos/bibliografia}
 
 % Cólofon
 % Inclui uma pequena nota com referência à UFPEThesis
