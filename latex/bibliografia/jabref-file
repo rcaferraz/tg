@@ -1,0 +1,29 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF-8
+
+@ARTICLE{adams06,
+  author = {Carlisle Adams},
+  title = {A Classification for Privacy Techniques},
+  journal = {University of Ottawa Law \& Technology Journal},
+  year = {2006},
+  volume = {3},
+  pages = {35--52},
+  issue = {1},
+  www_pdf_url = {http://www.uoltj.ca/articles/vol3.1/2006.3.1.uoltj.Adams.35-52.pdf},
+  www_section = {Misc},
+  www_tags = {selected}
+}
+
+@INPROCEEDINGS{tor-design,
+  author = {Roger Dingledine and Nick Mathewson and Paul Syverson},
+  title = {{Tor}: The Second-Generation Onion Router},
+  booktitle = {Proceedings of the 13th USENIX Security Symposium},
+  year = {2004},
+  month = {August},
+  www_html_url = {https://svn.torproject.org/svn/projects/design-paper/tor-design.html},
+  www_important = {1},
+  www_pdf_url = {https://svn.torproject.org/svn/projects/design-paper/tor-design.pdf},
+  www_section = {Anonymous communication},
+  www_tags = {selected}
+}
+
