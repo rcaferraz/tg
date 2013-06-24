@@ -27,3 +27,15 @@
   www_tags = {selected}
 }
 
+@MISC{folha-obama-vigilancia,
+  author = {BERNARDO MELLO FRANCO},
+  title = {Pressionado, Obama promete abrir informacoes sobre vigilancia na
+	internet},
+  howpublished = {Folha de Sao Paulo},
+  month = {June},
+  year = {2013},
+  owner = {rcaf},
+  timestamp = {2013.06.24},
+  url = {http://www1.folha.uol.com.br/mundo/2013/06/1297532-pressionado-obama-promete-abrir-informacoes-sobre-vigilancia-na-internet.shtml}
+}
+
