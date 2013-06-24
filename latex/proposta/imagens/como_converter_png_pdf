@@ -1,0 +1,9 @@
+Para poder colocar uma imagem no .tex, é preciso convertê-la para pdf.
+
+Para isso, utilizo o programa "convert", disponível através do pacote "imagemagick".
+
+Passo-a-passo:
+
+1. sudo apt-get install imagemagick
+2. convert imagem1.png imagem1.pdf
+
