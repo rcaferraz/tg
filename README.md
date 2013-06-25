@@ -3,6 +3,8 @@ tg
 
 Trabalho de Graduação - CIn/UFPE
 
+Para executar os comandos abaixo na distribuição Debian, instalei apenas o pacote texlive-full (cerca de 1GB após instalado)
+
 
 Para transformar arquivos .tex em .pdf:
 $ latex arquivo.tex
