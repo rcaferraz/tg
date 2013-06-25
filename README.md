@@ -7,10 +7,15 @@ Para executar os comandos abaixo na distribuição Debian, instalei apenas o pac
 
 
 Para transformar arquivos .tex em .pdf:
+
 $ latex arquivo.tex
+
 $ bibtex arquivo.aux
+
 $ latex arquivo.tex
+
 $ dvipdfm arquivo.dvi
+
 
 *pode ser necessário executar o comando "latex" mais de uma vez. Então na dúvida, execute duas vezes.
 
