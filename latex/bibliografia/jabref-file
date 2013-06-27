@@ -1,6 +1,35 @@
 % This file was created with JabRef 2.9.2.
 % Encoding: UTF-8
 
+@book{deibert2013black,
+  title={Black Code: Inside the Battle for Cyberspace},
+  author={Deibert, R.J.},
+  isbn={9780771025341},
+  url={http://books.google.com.br/books?id=sww\_ZnurVHEC},
+  year={2013},
+  publisher={McClelland \& Stewart}
+}
+
+@book{deibert2010access,
+  title={Access Controlled: The Shaping of Power, Rights, and Rule in Cyberspace},
+  author={Deibert, R.J. and OpenNet Initiative},
+  isbn={9780262014342},
+  lccn={2009049632},
+  series={Information Revolution and Global Politics},
+  url={http://books.google.com.br/books?id=ZojiQG4irWEC},
+  year={2010},
+  publisher={Mit Press}
+}
+
+@book{morozov2012net,
+  title={The Net Delusion: The Dark Side of Internet Freedom},
+  author={Morozov, E.},
+  isbn={9781610391634},
+  url={http://books.google.com.br/books?id=ctwEIggfIDEC},
+  year={2012},
+  publisher={PublicAffairs}
+}
+
 @ARTICLE{adams06,
   author = {Carlisle Adams},
   title = {A Classification for Privacy Techniques},
