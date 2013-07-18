@@ -25,9 +25,13 @@ Além destes ainda há os Infection Proxies, que ...
 
 Palestra "Bugged Planet" de Andy Müller fala sobre Infection Proxies.
 
-\section{Interceptação dos dados}
+\section{Interceptação dos dados em trânsito}
 
-Mesmo com a máquina limpa, o usuário pode ser vigiado à distância. Neste caso o usuário não tem como investigar se está sendo vigiado. A interceptação pode ser feita em vários lugares: interceptação de sinal WiFi, ou instalação de escutas no ISP a quem você se conecta, ou em um IXP que o seu ISP utiliza, no host com quem você se comunica,
+\subsection{Interceptação total dos dados}
+
+Mesmo com a máquina limpa, o usuário pode ser vigiado à distância, apenas escutando o que o usuário transmite. Neste caso o usuário não tem como descobrir se está sendo vigiado. A interceptação pode ser feita em vários lugares: interceptação de sinal WiFi, ou instalação de escutas no ISP a quem você se conecta, ou em um IXP que o seu ISP utiliza, no host com quem você se comunica,
+
+Como funciona uma "escuta" na Internet? Como o Wireshark funciona? (modo promíscuo - via ethernet e via wifi)
 
 \section{Com quem você se comunica}
 
@@ -35,3 +39,6 @@ Mesmo com a máquina limpa, o usuário pode ser vigiado à distância. Neste caso o 
 
 \lipsum[1]
 
+\section{Aquisição dos dados já enviados}
+
+Pode-se investigar um indivíduo sem necessariamente ele estar conectado na Internet naquele momento. O espião pode siimplesmente conseguir acesso a registros que ficam armazenados em dispositivos da infraestrutura da rede, internos ao ISP, por exemplo. Ou então, acessar dados mais ricos, registros de utilização de um serviço como uma rede social, mensageiro instantâneo ou e-mail. 
