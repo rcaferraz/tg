@@ -9,6 +9,16 @@ Any sufficiently advanced technology is indistinguishable from magic.
 
 Devido à sua organização descentralizada, a Internet é uma plataforma de comunicação mais robusta a desastres do que os seus antecessores telefonia, rádio e TV. Para quaisquer desses serviços ficarem indisponíveis, basta que se destrua sua respectiva torre de transmissão, no caso de rádio e TV, ou central de comutação no caso dos telefones. Essa maior robustez da Internet, entre outras novidades, acabou gerando uma propaganda em seu favor, no início da sua popularização, que chegou ao ponto de classificá-la erroneamente como incensurável em \cite{time-dewitt}. Para o leitor ter uma visão mais crítica sobre o que se veicula nos meios de comunicação e entender melhor o que será apresentado neste trabalho, este capítulo irá resumir os conceitos básicos que tangem o funcionamento da Internet e sua infraestrutura.
 
+\section{Analogia com serviço postal}
+
+A Internet funciona como o serviço de um correio. Cada encomenda possui um certo conteúdo e deve apresentar uma etiqueta contendo o endereço destino e o endereço do remetente. Neste correio, no entanto, o conteúdo das encomendas não é protegido. Qualquer elemento que participe da entrega pode ver o conteúdo, armazenar cópias, e também uma cópia da etiqueta com os endereços. Na verdade, muitos governos exigem que os responsáveis pelo trânsito das encomendas copiem e armazenem esses dados por um tempo mínimo, para possíveis investigações policiais futuras. Outra diferença para um correio normal, é que os carteiros, ou veículos que levam as encomendas, só são capazes de levar pacotes bem pequenos. Então, na maioria das vezes, o conteúdo a ser enviado é dividido em pacotes menores, para serem enviados separadamente. Ao chegar no destinatário, o conteúdo das frações da encomenda são reunidos, formando-se o dado enviado originalmente.
+
+Para acessar um Website, o Google por exemplo, primeiro é enviada uma "encomenda" ao endereço desse Website. O conteúdo da encomenda é um pedido, requisitando a página inicial. O Website então envia de volta outra encomenda, contendo a página, que ao chegar no computador, é exibida ao usuário. Quando o usuário clica em algum link do site, uma nova requisição é enviada, que por sua vez é respondida novamente com outra página. A navegação na Web funciona basicamente desta forma: requisições dos usuários e respostas dos servidores Web, em forma de páginas.
+
+No entanto, para o correio entregar os pacotes, ele exige o endereço IP (é assim que se chamam os endereços neste correio). Este endereço é formado apenas por alguns números. Não há nomes, nem ruas, nem cidades neste endereço.
+
+Como ficaria difícil decorar os números dos endereços IP de todos os seus Websites favoritos, foi criado uma tabela, compartilhada em todo o mundo, que contém nomes associados a endereços IP. Assim, em vez de decorarmos que o endereço do Google é 74.125.234.240, basta que decoremos o nome \emph{www.google.com}. Nosso \emph{browser} fica encarregado de consultar essa tabela e transformar o nome \emph{www.google.com} em um endereço IP. Esta tabela é fornecida por servidores específicos, conhecidos como Servidor DNS.
+
 \section{Conceitos básicos}
 
 %Fonte: http://www.ptt.br/documentacao
