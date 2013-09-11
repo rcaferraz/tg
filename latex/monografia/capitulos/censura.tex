@@ -5,34 +5,43 @@ he who controls the past controls the future, and he who controls the present co
 \end{epigraph}
 \end{minipage}
 
+A prensa de tipos móveis inventada por Johannes Gutenberg, no século XV, revolucionou a disseminação de informação no ocidente, quando a impressão de livros era muito trabalhosa e pouco eficiente. O fato de mais pessoas terem acesso a livros foi considerado essencial para o início do Renascimento, período em que a sociedade se transformou em cultura, economia, política, religião, marcando o fim da Idade Média e início da Idade Moderna.
+
+É notável que mudanças no acesso e fluxo de informação causam impactos na sociedade. Impactos também acontecem quando surgem novos meios de comunicação. Na época em que a comunicação escrita e impressa era a única forma de guardar conhecimento, a censura era feita através do recolhimento de livros e posterior incineração. ... TODO
+
 \section{Remoção de conteúdo}
 
-\lipsum[1]
+O método mais simples de censura não utiliza meios tecnológicos, mas sim meios jurídicos, ou algum tipo de influência sobre o provedor de conteúdo a ser censurado. Através desta influência, o autor do conteúdo, ou o servidor que contém a página é obrigado a remover o material indesejado pelo governo, sob pena de sofrer consequências caso não o faça.
+
+A depender do país em questão, esse tipo de censura pode ser mais ou menos comum. Em alguns países, a quantidade de tipos de conteúdo proibidos é grande, sendo difícil para o governo monitorar todos os sites, mesmo em casos que força humana não é problema, como na China. Neste caso, pode-se terceirizar a censura.
 
 \subsection{Terceirização da censura}
 
-Na China, os provedores de conteúdo possuem uma licença concedida pelo governo, para funcionarem. Caso seja encontrado em suas páginas algum conteúdo proibido, o provedor é responsabilizado, podendo perder sua licença. Desta forma, devido ao risco que corre caso não o faça, o próprio provedor exerce a função de censor, que seria do governo.
+Na China, os provedores de conteúdo precisam ter uma licença concedida pelo governo para funcionarem. Caso seja encontrado em suas páginas algum conteúdo proibido, o provedor é responsabilizado, podendo perder sua licença. Desta forma, devido ao risco que corre caso não o faça, o próprio provedor exerce a função de censor, que seria do governo.
 
-\subsection{Remoções legítimas de conteúdo}
+\subsection{Legitimidade da censura}
 
-Nem todo tipo de censura é ruim. No Brasil, por exemplo, é proibido a apologia ao Nazismo. Já em alguns países árabes, é proibida a veiculação de pornografia. Quando o conteúdo fere de alguma forma as leis de um país, em que a nação como um todo é prejudicada devido à disponibilidade de um certo conteúdo, pode ser considerado justa a remoção do mesmo.
+Nem todo tipo de censura é ruim. Certos tipos de ideias, por exemplo, se propagadas, podem levar ao ódio e violência. No Brasil, por exemplo, é proibido a apologia ao Nazismo. Já em alguns países árabes, é proibida a veiculação de pornografia. Quando o conteúdo fere de alguma forma as leis de um país, em que a nação como um todo é prejudicada devido à disponibilidade de um certo conteúdo, pode ser considerado justa a remoção do mesmo.
 
-No entanto, a lei dos países diferem, então muitas vezes o conteúdo -- mesmo que gerado dentro do país onde ele não é permitido -- pode estar hospedado em outro país com legislação diferente. Neste caso, tudo que o país pode fazer é bloquear o acesso ao conteúdo externo.
+No entanto, a lei dos países diferem, então muitas vezes o conteúdo -- mesmo que gerado dentro do país onde ele não é permitido -- pode estar hospedado em outro país com legislação diferente. Neste caso, tudo que o país pode fazer é recorrer a meios tecnológicos, bloqueando o acesso ao conteúdo externo.
 
 \section{Bloqueio de acesso a conteúdo}
 
 \subsection{DNS Poisoning}
 
-Como explicado na seção \ref{subsec:HowWebAndDNSWorks} da página \pageref{subsec:HowWebAndDNSWorks}...
-\lipsum[1]
+Como explicado na seção \ref{subsec:HowWebAndDNSWorks} da página \pageref{subsec:HowWebAndDNSWorks}, os servidores DNS são responsáveis por transformar URLs como \emph{www.facebook.com} no endereço IP correspondente. Dessa forma, o usuário não precisa decorar o IP dos seus sites favoritos, basta lembrar a URL e digitá-la no navegador.
+
+Uma forma de dificultar o acesso de usuários a certos sites é alterar as tabelas dos servidores DNS utilizados em um dado país, colocando endereços IP inválidos para os sites a serem censurados. Assim, quando o usuário digitar o endereço \emph{www.facebook.com} no seu navegador, a sua requisição irá para um IP diferente daquele que o Facebook utiliza, provavelmente um IP inválido, ou de alguma página do governo avisando que aquele site está bloqueado.
+
+No entanto, este método não é muito eficaz. Para contorná-lo, bastaria trocar de servidor DNS, ou decorar o IP do Facebook e digitá-lo na barra de endereços do navegador. Por isso, os governos também bloqueiam pacotes originados ou destinados a certos endereços IP. 
 
 \subsection{Bloqueio a IPs}
 
-\lipsum[1]
+Os roteadores que recebem e reencaminham pacotes, podem ser configurados para descartar pacotes com certos endereços como remetente ou destinatário. Desta forma, torna-se impossível enviar pacotes diretamente a estes servidores.
 
 \subsection{Filtragem de pacotes}
 
-Citar o Skype versão chinesa.
+Também é possível filtrar pacotes não apenas pelos endereços envolvidos, mas também pelo conteúdo da mensagem. Citar o Skype versão chinesa.
 
 \lipsum[1]
 
