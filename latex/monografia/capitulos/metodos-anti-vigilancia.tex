@@ -1,4 +1,4 @@
-\chapter{Métodos para contornar vigilância e censura na Internet}
+\chapter{Métodos para contornar vigilância e censura na Internet} \label{cap:MetodosAnti}
 
 \section{Proxy}
 
@@ -11,7 +11,7 @@ Existe ainda a possibilidade de usar proxies múltiplos. Em fóruns de discussão n
 %Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
 \scalebox{0.5}{\includegraphics[bb=0 0 973 612]{imagens/sevenproxies.pdf}}
 \end{center}
-\caption[Imagem resposta com o texto "I'm behind seven proxies"]{Esta expressão surgiu quando alguns hackers mal intencionados invadiram o computador de uma mulher e postaram vídeos e fotos suas em um fórum de discussão chamado \emph{4chan}. Quando descobriu, a mulher foi a este fórum ameaçar que iria denunciar os hackers às autoridades. Foi aí que um deles respondeu com ``Boa sorte! Estou por trás de sete proxies!'', significando que seria praticamente impossível localizá-lo. Mais informações sobre esta frase que acabou se tornando um \emph{meme} encontra-se em: \url{http://knowyourmeme.com/memes/good-luck-im-behind-7-proxies}}\label{fig_sevenproxies}
+\caption[Imagem resposta com o texto I'm behind seven proxies]{Esta expressão surgiu quando alguns hackers mal intencionados invadiram o computador de uma mulher e postaram vídeos e fotos suas em um fórum de discussão chamado \emph{4chan}. Quando descobriu, a mulher foi a este fórum ameaçar que iria denunciar os hackers às autoridades. Foi aí que um deles respondeu com ``Boa sorte! Estou por trás de sete proxies!'', significando que seria praticamente impossível localizá-lo. Mais informações sobre esta frase que acabou se tornando um \emph{meme} encontra-se em: \url{http://knowyourmeme.com/memes/good-luck-im-behind-7-proxies} } \label{fig_sevenproxies}
 \end{figure}
 
 
@@ -26,15 +26,20 @@ Existe ainda a possibilidade de usar proxies múltiplos. Em fóruns de discussão n
 
 O Tor é classificado por alguns como uma ferramenta de proxy. Na verdade ele utiliza o conceito de proxies, mas aumenta um pouco a complexidade para agregar valores que o Proxy por si só não traz.
 
-O Tor serve para despistar alguém que queira descobrir com quem você se comunica e o que você transmite e recebe pela Internet. Seguindo a analogia da seção \ref{sec:AnalogiaServicoPostal} na página \pageref{sec:AnalogiaServicoPostal}, é como se você continuasse usando o serviço postal, mas contratasse secretamente pessoas para servirem como intermediários. Ou seja, se você deseja enviar uma encomenda a alguém em Recife, você deve enviar primeiro para seu parceiro intermediário em São Paulo, que já sabe que deve reenviar para um outro intermediário em Manaus, que por sua vez, envia para outro intermediário em Fortaleza, que finalmente envia para o seu destinatário em Recife. Um detalhe importante é que todos esses intermediários trabalham para várias outras pessoas. Ou seja, assim que sua encomenda chega no primeiro intermediário, alguém que estiver vigiando sua comunicação com este intermediário, não saberá quais dos pacotes que ele enviou é o seu. 
+O Tor serve para despistar alguém que queira descobrir com quem você se comunica e o que você transmite e recebe pela Internet. Seguindo a analogia da seção \ref{sec:AnalogiaServicoPostal} na página \pageref{sec:AnalogiaServicoPostal}, é como se você continuasse usando o serviço postal, mas criptografasse suas mensagens e contratasse secretamente pessoas para servirem como intermediários. Ou seja, se você deseja enviar uma encomenda a alguém em Manaus, você deve enviar primeiro para seu parceiro intermediário em São Paulo, que já sabe que deve reenviar para um outro intermediário em Florianópolis, que por sua vez envia para outro intermediário em Fortaleza, que finalmente envia para o seu destinatário em Recife. Um detalhe importante é que todos esses intermediários trabalham para várias outras pessoas. Ou seja, assim que sua encomenda chega no primeiro intermediário, alguém que estiver vigiando sua comunicação com este intermediário, não saberá quais dos pacotes que ele reenviou é o seu, pois são muitos pacotes que saem dele.
 
 ..entrar em mais detalhes técnicos..
 
-..citar falha caso ambas as pontas estejam sendo monitoradas..
+O Tor tem alguns defeitos. Caso você e seu destinatário estejam sendo monitorados, é possível determinar se vocês estão se comunicando, através de uma análise estatística.
+
+Outro problema é que o IP dos \emph{relays} é uma informação pública e facilmente pode-se bloqueá-los. A criação dos chamados \emph{bridges} foi uma tentativa de solucionar isso. Também é desvantajoso o fato de ser necessário fazer um download para poder aproveitar esta técnica. Se o governo bloquear os sites que oferecem o Tor para download, o cidadão terá dificuldades para conseguí-lo e utilizá-lo.
 
 ..citar bloqueio aos relays na china e a criação de bridges..
 
 ..citar notícias recentes sobre tor..
+
+FBI admits what we all suspected: it compromised freedom hosting's Tor Servers.
+\url{http://arstechnica.com/tech-policy/2013/09/fbi-admits-what-we-all-suspected-it-compromised-freedom-hostings-tor-servers/}
 
 \subsection{Tor+SSL}
 
@@ -54,8 +59,7 @@ http://www.dit-inc.us/freegate
 
 \section{Acesso via satélite}
 
-\lipsum[1]
-
+..Citar projetos de hackers para criar satélites para acabar com censura na Internet em alguns países \url{http://www.bbc.co.uk/news/technology-16367042}...
 
 \section{Esteganografia}
 
