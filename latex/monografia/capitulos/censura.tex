@@ -15,9 +15,9 @@ Além disso, devido à dinamicidade e complexidade da rede, as formas de censurar 
 
 \section{Remoção de conteúdo}
 
-O método mais simples de censura não utiliza meios tecnológicos, mas sim meios jurídicos, ou algum tipo de influência sobre o provedor de conteúdo a ser censurado. Através desta influência, o autor do conteúdo, ou o servidor que contém a página é obrigado a remover o material indesejado pelo governo, sob pena de sofrer consequências caso não o faça.
+O método mais simples de censura não utiliza meios tecnológicos, mas sim meios jurídicos, ou algum tipo de influência sobre o provedor de conteúdo a ser censurado. Através desta influência, o autor do conteúdo, ou o servidor que contém a página é obrigado a remover o material indesejado pelo governo, sendo possivelmente penalizado caso não o faça.
 
-A depender do país em questão, esse tipo de censura pode ser mais ou menos comum. Em alguns países, a quantidade de tipos de conteúdo proibidos é grande, sendo difícil para o governo monitorar todos os sites, mesmo em casos que força humana não é problema, como na China. Neste caso, pode-se terceirizar a censura.
+A depender do país em questão, esse tipo de censura pode ser mais ou menos comum. Em alguns países, a quantidade de tipos de conteúdo proibidos é grande, sendo difícil para o governo monitorar todos os sites. Neste caso, pode-se terceirizar a censura.
 
 \subsection{Terceirização da censura}
 
@@ -25,36 +25,59 @@ Na China, os provedores de conteúdo precisam ter uma licença concedida pelo gove
 
 \subsection{Legitimidade da censura}
 
-Nem todo tipo de censura é ruim. Certos tipos de ideias, por exemplo, se propagadas, podem levar ao ódio e violência. No Brasil, por exemplo, é proibido a apologia ao Nazismo. Já em alguns países árabes, é proibida a veiculação de pornografia. Quando o conteúdo fere de alguma forma as leis de um país, em que a nação como um todo é prejudicada devido à disponibilidade de um certo conteúdo, pode ser considerado justa a remoção do mesmo.
+Nem todo tipo de censura é ruim. Certos tipos de ideias, por exemplo, se propagadas, podem levar ao ódio e violência. No Brasil, por exemplo, é proibido a apologia ao Nazismo. Já em alguns países árabes, é proibida a veiculação de pornografia. Quando o conteúdo fere de alguma forma as leis de um país, em que a nação como um todo é prejudicada devido à disponibilidade de um certo conteúdo, a remoção é legal.
 
-No entanto, a lei dos países diferem, então muitas vezes o conteúdo -- mesmo que gerado dentro do país onde ele não é permitido -- pode estar hospedado em outro país com legislação diferente. Neste caso, tudo que o país pode fazer é recorrer a meios tecnológicos, bloqueando o acesso ao conteúdo externo.
+No entanto, a lei dos países diferem e muitas vezes o conteúdo pode estar hospedado em outro país com legislação diferente. Neste caso, tudo que o governo pode fazer é recorrer a meios tecnológicos, bloqueando o acesso ao conteúdo externo.
 
 \section{Bloqueio de acesso a conteúdo}
 
 \subsection{DNS Poisoning}
 
-Como explicado na seção \ref{subsec:HowWebAndDNSWorks} da página \pageref{subsec:HowWebAndDNSWorks}, os servidores DNS são responsáveis por transformar URLs como \emph{www.facebook.com} no endereço IP correspondente. Dessa forma, o usuário não precisa decorar o IP dos seus sites favoritos, basta lembrar a URL e digitá-la no navegador.
+Como explicado na seção \ref{subsec:HowWebAndDNSWorks} da página \pageref{subsec:HowWebAndDNSWorks}, os servidores DNS são responsáveis por transformar endereços como \emph{www.facebook.com} no endereço IP correspondente. Dessa forma, o usuário não precisa decorar o IP dos seus sites favoritos, basta lembrar a URL e digitá-la no navegador.
 
 Uma forma de dificultar o acesso de usuários a certos sites é alterar as tabelas dos servidores DNS utilizados em um dado país, colocando endereços IP inválidos para os sites a serem censurados. Assim, quando o usuário digitar o endereço \emph{www.facebook.com} no seu navegador, a sua requisição irá para um IP diferente daquele que o Facebook utiliza, provavelmente um IP inválido, ou de alguma página do governo avisando que aquele site está bloqueado.
 
-No entanto, este método não é muito eficaz. Para contorná-lo, bastaria trocar de servidor DNS, ou decorar o IP do Facebook e digitá-lo na barra de endereços do navegador. Por isso, os governos também bloqueiam pacotes originados ou destinados a certos endereços IP. 
+No entanto, este método não é muito eficaz. Para contorná-lo, bastaria trocar de servidor DNS, ou decorar o IP do Facebook e digitá-lo na barra de endereços do navegador. Por isso, os governos também bloqueiam pacotes originados ou destinados a certos endereços IP.
 
-\subsection{Bloqueio a IPs}
+A Figura \ref{fig_uaecensorship} mostra um exemplo do que acontece nos Emirados Árabes Unidos quando se acessa um site proibido pelo governo.
 
-Os roteadores que recebem e reencaminham pacotes, podem ser configurados para descartar pacotes com certos endereços como remetente ou destinatário. Desta forma, torna-se impossível enviar pacotes diretamente a estes servidores.
+%\begin{figure}[ht]
+\begin{figure}
+\begin{center}
+%Conversao PNG para PDF usando "convert midianinjape.png midianinja.pdf" no terminal do ubuntu.
+\scalebox{0.5}{\includegraphics[bb=0 0 973 612]{imagens/uae-censorship.pdf}}
+\end{center}
+\caption[Página recebida ao tentar acessar sites proibidos nos Emirados Árabes Unidos]{Com textos em árabe e em inglês, avisa-se que a Internet é um poderoso meio de comunicação, compartilhamento e de aprendizado diário. No entanto, o conteúdo que o usuário está tentando acessar contém conteúdo proibido pela ``Política Reguladora de Gerenciamento de Acesso à Internet'', da Autoridade Reguladora de Telecomunicações dos Emirados Árabes Unidos.}\label{fig_uaecensorship}
+\end{figure}
 
-\subsection{Filtragem de pacotes}
 
-Também é possível filtrar pacotes não apenas pelos endereços envolvidos, mas também pelo conteúdo da mensagem. Citar o Skype versão chinesa.
+\subsection{Filtragem de pacotes: Bloqueio a IPs}
 
-\lipsum[1]
+Os roteadores que recebem e reencaminham pacotes, podem ser configurados para descartar pacotes com certos endereços como remetente ou destinatário. Desta forma, torna-se impossível enviar pacotes diretamente a alguns servidores. Esta é uma forma mais eficaz de censura, visto que torna-se impossível estabelecer conexão com algumas páginas, se a requisição partir de dentro do país a ser censurado. Um exemplo de uso desta técnica foi percebido por pesquisadores em \cite{reflets2013iran}, em que nas vésperas das eleições presidenciais em Junho de 2013, não se podia acessar um site local de notícias \url{http://presstv.ir}, nem o \emph{The Guardian}, nem o \emph{Le Monde}. Há no entanto, formas de se utilizar um intermediário para burlar o bloqueio governamental. Mais informações sobre estas técnicas estão presentes no Capítulo \ref{cap:MetodosAnti}.
+
+\subsection{Filtragem de pacotes: Inspeção de pacotes}
+
+Também é possível filtrar pacotes não apenas pelos endereços envolvidos, mas também pelo conteúdo da mensagem. Esta técnica é conhecida como \emph{Deep Packet Inspection} e é utilizada por alguns provedores de Internet, inclusive no Brasil, para limitar o uso de serviços como \emph{Torrent} e \emph{streaming} de vídeos. O Governo Chinês vai além e não só detecta que tipo de serviço os cidadãos utilizam, mas também que conteúdo eles acessam e transmitem na rede. De acordo com os experimentos feitos em \cite{fengding2011}, na China não é possível buscar no Google por certas palavras. Ao clicar no botão de busca, é exibida uma mensagem de erro, como se a conexão tivesse sido resetada. Além disso, o usuário não consegue voltar a acessar o Google por cerca de quinze minutos. A Wikipédia inclusive mantém uma lista de quais palavras são censuradas na China em \cite{blacklistedwordswiki}.
 
 \section{Empresas que lucram com a censura e a vigilância}
 
-Muitas empresas sediadas no ocidente ganham dinheiro produzindo sistemas para empregar vigilância e censura em países como Síria, Arábia Saudita, Irã e outros.
+Andy Müller-Maguhn, co-autor do livro \emph{Cypherpunks} (\cite{assange2012cypherpunks}) de Julian Assange, é fundador do site \emph{Bugged Planet} - \url{http://buggedplanet.info} (Planeta grampeado, em inglês). Lá há uma página no formato \emph{wiki}, colaborativa, onde se compartilham informações sobre vigilância na Internet, incluindo listas de empresas e pessoas que ganham dinheiro com este nicho mercadológico.
 
-Citar blue coat, Müller, ...
+Uma delas é a \emph{Blue Coat}, alvo de pesquisas como \cite{behindbluecoat2011}, \cite{planetbluecoat2013} e \cite{refletsopsyria2011}. É um exemplo de empresa que produz tecnologia classificada como de ``uso dual''. Ou seja, pode ter usos pacíficos e benéficos, assim como usos militares e violentos. Um exemplo de tecnologia de uso dual são os foguetes, que podem ser utilizados para levar homens ao espaço, ou para lançar satélites, como também serem utilizados como armas, como mísseis de longo alcance.
+
+Os dispositivos da \emph{Blue Coat}, podem ser utilizados para gerenciar a rede interna de uma empresa, evitando que funcionários acessem conteúdo inadequado para a realização de suas atividades, ou para garantir o desempenho e segurança da rede. Da mesma forma, pode ser instalado nas fronteiras da Internet de um país e monitorar o tráfego de todos os cidadãos, assim como filtrar o que eles podem acessar. Na Figura \ref{fig_bluecoat} é mostrada a página da empresa, apresentando seus produtos.
+
+%\begin{figure}[ht]
+\begin{figure}
+\begin{center}
+\scalebox{0.7}{\includegraphics[bb=0 0 973 612]{imagens/bluecoat.pdf}}
+\end{center}
+\caption[Imagem capturada da página da Blue Coat]{Texto legenda imagem Blue Coat}\label{fig_bluecoat}
+\end{figure}
+
+Foi descoberto que dispositivos da \emph{Blue Coat} eram utilizados pelo governo Sírio, conhecido por perseguir civis contrários ao governo de Bashar Al-Assad. Os mesmos dispositivos foram descobertos sendo utilizados por vários outros países do oriente médio, Ásia e África, segundo relatório do \emph{Citizen Lab} da Universidade de Toronto (\cite{planetbluecoat2013}).
 
 \section{A relação entre vigilância e censura -- Autocensura}
 
-\lipsum[1]
+Ronald Deibert em \cite{deibert2013black} compara o sistema de censura chinês ao livro 1984 de George Orwell e ao conceito de penitenciária idealizado por Jeremy Bentham, o Pan-óptico. No livro de George Orwell, o ``Big Brother'' se mostra presente em vários momentos do dia-a-dia dos cidadãos. Logo que acordam, por exemplo, ouvem alguma mensagem do ``Big Brother''. Portanto, sentem-se vigiados pois está explícita a presença do vigia. Já no Pan-óptico, todas as celas são construídas lado a lado, formando uma circunferência, de modo a serem igualmente e completamente visíveis a uma torre de vigilância central. Nesta torre os guardas ficam escondidos atrás de venezianas, não sendo possível para os presos saber se estão sendo olhados naquele momento ou não. Ou seja, a intenção é dar a impressão que todos estão sendo vigiados, mesmo havendo poucos guardas. Ronald Deibert diz que o sistema de censura chinês se assemelha mais ao Pan-óptico do que ao ``Big Brother'' de George Orwell. A vigilância é implícita, o que gera uma auto-censura nas pessoas, por medo de serem pegas, sem saber se estão sendo vigiadas naquele momento ou não.
+
