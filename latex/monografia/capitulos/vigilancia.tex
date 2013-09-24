@@ -11,45 +11,49 @@ A intrínseca falta de transparência das agências de inteligência governamentais,
 
 \subsection{Infecção do computador}
 
-Esta estratégia é mais comumente utilizada por criminosos que desejam roubar senhas de banco, por exemplo. Mas há registros de governos utilizando desta técnica.
+Esta estratégia é mais comumente utilizada por criminosos que desejam roubar senhas de banco, por exemplo. Mas há registros de governos utilizando desta técnica (\cite{vietnammalware2010}). Também conhecidos como Cavalos de Troia, são softwares que à primeira vista são inofensivos, como uma barra de ferramentas extra no navegador, enfeites para a área de trabalho, algum anexo recebido por e-mail, ou geradores de chaves seriais, para piratear programas pagos. Estes softwares quando executados, instalam um programa secundário, que executa sem o usuário saber, e pode gravar tudo o que ele digita, o que ele vê na tela, e até o que a \emph{webcam} e seu microfone estão captando. Tudo isso pode ser enviado via Internet para alguém interessado em monitorar as ações do usuário e é possível ainda controlar o que a máquina faz (controlar mouse e teclado remotamente).
 
-Explicar sobre Cavalo de Troia. É possível ficar escutando o que entra/sai do computador pela rede, para tentar encontrar algum tráfego suspeito, possivelmente gerado por um Cavalo de Troia.
+Esta técnica é perigosa para o espião, pois é possível instalar uma máquina apenas para analisar o tráfego da máquina infectada e descobrir comunicações suspeitas, possivelmente resultando na identificação do invasor. Foi o que aconteceu com a GhostNet, rede de espionagem supostamente montada por agentes chineses (\cite{ghostnet2009}). Por isso, para alguns, pode ser mais interessante o monitoramento instalando escutas nos provedores de acesso à Internet (ISPs) ou Pontos de Troca de Tráfego (PTT ou IXP, em inglês) (explicação desses termos estão presentes no Capítulo \ref{cap:Fundamentos}. Essa foi a estratégia da Agência Nacional de Segurança dos Estados Unidos (NSA) ao instalar uma sala de operações de espionagem dentro de um Ponto de Troca de Tráfego da empresa \emph{AT\&T} em 2003 (\cite{markkleinnsa} e \cite{heptingatt}).
 
-Pode ser um instalador enviado por anexo em um e-mail, disfarçado de mensagem de alguém conhecido, ou de alguma entidade bancária ou do governo, por exemplo.
+%Uma forma mais sofisticada é controlar um servidor DNS para converter nomes em IPs falsos, redirecionando usuários para cópias de páginas de bancos com fins maliciosos. Já aconteceu no Brasil em 2009 (? - ver livro Black Code).
 
-Uma forma mais sofisticada é controlar um servidor DNS para converter nomes em IPs falsos, redirecionando usuários para cópias de páginas de bancos com fins maliciosos. Já aconteceu no Brasil em 2009 (? - ver livro Black Code).
+%Além destes ainda há os Infection Proxies, que ... (Andy Müller)
 
-Além destes ainda há os Infection Proxies, que ...
+%http://www.scmagazineuk.com/spy-malware-buried-on-official-tibetan-website/article/307285/
 
-http://www.scmagazineuk.com/spy-malware-buried-on-official-tibetan-website/article/307285/
+%\subsection{Infection Proxies}
 
-\subsection{Infection Proxies}
-
-Palestra "Bugged Planet" de Andy Müller fala sobre Infection Proxies.
+%Palestra "Bugged Planet" de Andy Müller fala sobre Infection Proxies.
 
 \section{Interceptação dos dados em trânsito}
 
 \subsection{Interceptação total dos dados}
 
-Mesmo com a máquina limpa, o usuário pode ser vigiado à distância, apenas escutando o que o usuário transmite. Neste caso o usuário não tem como descobrir se está sendo vigiado. A interceptação pode ser feita em vários lugares: interceptação de sinal WiFi, ou instalação de escutas no ISP a quem você se conecta, ou em um IXP que o seu ISP utiliza, no host com quem você se comunica,
-
-Como funciona uma "escuta" na Internet? Como o Wireshark funciona? (modo promíscuo - via ethernet e via wifi)
+Assim como menionado na seção anterior, mesmo com a máquina livre de vírus e \emph{malwares}, o usuário pode ser vigiado à distância, apenas escutando o que ele transmite e recebe. Neste caso o usuário não tem como descobrir se está sendo vigiado. A interceptação pode ser feita em vários pontos: interceptação de sinal \emph{Wi-Fi}, instalação de escutas no \emph{ISP} a quem você se conecta, ou em um \emph{IXP} que o seu \emph{ISP} utiliza, ou no próprio servidor com quem você está se comunicando no momento.
 
 \subsection{Descoberta dos seus destinatários}
 
-Não é possível encriptar o cabeçalho IP. É através dele que os roteadores sabem a quem sua mensagem deve ser entregue. Por isso, esta informação está disponível para várias entidades diferentes, a começar pelo seu ISP. Existem formas de dificultar este rastreamento, mas de modo geral, é possível descobrir os principais servidores com os quais você se comunica, mesmo que você tenha o cuidado de encriptar os dados enviados. Isto pode ser feito não apenas lendo o cabeçalho IP, mas também através da leitura das suas requisições a servidores DNS.
+Caso você esteja usando uma comunicação criptografada, o conteúdo da mensagem pode estar protegido (ou não, como explicado sobre ataque \emph{man in the middle} na seção \ref{sec:criptografia}). No entanto, não é possível encriptar o cabeçalho IP, ou seja, o endereço remetente e o endereço destino. É através dele que os roteadores sabem a quem sua mensagem deve ser entregue. Por isso, esta informação está disponível para várias entidades diferentes, a começar pelo seu \emph{ISP}. Pode parecer uma informação pouco comprometedora, mas em países com intensa perseguição a dissidentes políticos, a descoberta de quem conversa com quem é uma informação estratégica muito valiosa.
 
-\lipsum[1]
+Ou seja, é possível descobrir os principais servidores com os quais você se comunica, mesmo que você tenha o cuidado de encriptar os dados enviados. Isto pode ser feito não apenas lendo o cabeçalho IP, mas também através da leitura das suas requisições a servidores DNS.
 
-\subsection{Web Bugs}
+\subsection{Grampos na Web (\emph{Web Bugs})}
 
-Ao acessar um site como o Facebook, há na página dispositivos que servem para parceiros do Facebook registrarem sua presença. Ao mesmo tempo em que você requisita a página do Facebook, você automaticamente requisita uma outra página, contida dentro do Facebook, mas hospedada por outro servidor. Esta requisição contém informações que só seriam visíveis ao Facebook, e passam a ser compartilhadas com esses parceiros. Estes parceiros também instalam estes "dispositivos" em outros sites, como sites de e-commerce, por exemplo. Desta forma, o parceiro do Facebook consegue saber o que você está buscando numa loja online, e aí na hora que você utiliza o Facebook, ele apresenta um anúncio parecido com o que você procurou, aumentando as chances de você clicar. Estes dados que traçam seu perfil consumidor não necessariamente são protegidos. Pode-se até vender este tipo de informação.
+Ao acessar um site, algumas das informações recebidas não são exibidas na página, mas armazenadas no computador para uso posterior. Alguns desses dados são conhecidos como \emph{cookies} e são trocados entre seu navegador e os sites sem o usuário ter conhecimento. Seu uso mais comum é evitar que o usuário tenha que digitar usuário e senha toda vez que acessa sua página de \emph{webmail} ou rede social, por exemplo. Ao autenticar-se pela primeira vez, o site em questão envia um \emph{cookie} ao navegador do usuário contendo um identificador, assim sempre que o usuário entrar denovo no site, ele enviará junto com a requisição da página este \emph{cookie} para mostrar que trata-se do mesmo navegador que havia se logado há pouco tempo atrás.
 
-http://en.wikipedia.org/wiki/Web(underline)bug
-http://disconnect.me
-https://www.eff.org/deeplinks/2012/04/4-simple-changes-protect-your-privacy-online
-http://www.wikihow.com/Prevent-People-from-Tracking-You-on-the-Internet
+\emph{Cookies} também são utilizados por diversos outros sites, como sites de compras, para lembrar das suas preferências, ou guardar os produtos no seu carrinho de compras, mesmo sem você ser cadastrado no site em questão.
+
+Já os \emph{Pixel tags} são outro tipo de dispositivo para guardar informações de usuários na Web. O Facebook explica o que eles são em sua página \url{https://www.facebook.com/help/cookies}:
+
+\begin{quote}``Pixel tags (também conhecidos como GIFs limpos, Web beacons ou pixels) são pequenos blocos de código em uma página da web que permitem que os sites realizem ações, como ler e armazenar cookies. A conexão resultante pode incluir informações como os endereços de IP de uma pessoa, o horário em que a pessoa visualizou o pixel e o tipo de navegador usado.
+
+Nós usamos pixels dentro e fora do Facebook, como quando você visita o nosso site ou o site de um de nossos parceiros. Os pixels nos permitem ler quaisquer cookies existentes do Facebook ou também depositar um novo cookie em seu navegador ou dispositivo. Nós usamos pixel tags para personalizar sua experiência e saber sobre como as pessoas usam produtos e serviços. Por exemplo, podemos usar pixel tags para saber se alguém, usando certo navegador, visualizou um anúncio no Facebook e também se comprou um produto de um anunciante. Isso nos ajuda a mostrar aos anunciantes que os anúncios que veiculam são eficazes. Também podemos usar pixels para ajudar a exibir anúncios dentro e fora do Facebook. Por exemplo, um parceiro pode usar um pixel para nos avisar quando você visitou seu site, para que futuramente possamos lhe exibir um anúncio no Facebook. Além disso, usamos pixels para saber quando você viu ou interagiu com o conteúdo do Facebook, como quando você lê uma notificação de e-mail que enviamos, de modo que seja possível evitar a exibição da mesma notificação quando você acessar o site ou aplicativo do Facebook, ou então para avaliar, entender e aprimorar nossos serviços.''
+\end{quote}
+
+Ou seja, através de \emph{cookies} e \emph{pixel tags} empresas como Facebook e várias outras registram suas compras, visualizações, pesquisas e várias outras ações na Web. Esse tipo de informação pode inclusive ser vendida para qualquer serviço interessado, ou requisitada por agentes governamentais.
+
+Já existem aplicações que tentam evitar esse tipo de monitoramento, como o \emph{Disconnect.me} que funciona como uma extensão do navegador, evitando comunicação com uma ``lista negra'' de URLs voltadas apenas para monitoramento de usuários na Web (\url{http://disconnect.me}). Outra forma de evitar esse tipo de invasão é bloquear totalmente os anúncios na Web, também através de uma extensão no navegador como o \emph{AdBlock Plus}. A \emph{Electronic Frontier Foundation} recomenda a instalação dessas aplicações em \cite{eff4tips}.
 
 \section{Aquisição dos dados já enviados}
 
-Pode-se investigar um indivíduo sem necessariamente ele estar conectado na Internet naquele momento. O espião pode siimplesmente conseguir acesso a registros que ficam armazenados em dispositivos da infraestrutura da rede, internos ao ISP, por exemplo. Ou então, acessar dados mais ricos, registros de utilização de um serviço como uma rede social, mensageiro instantâneo ou e-mail. 
+Pode-se investigar um indivíduo sem necessariamente ele estar conectado na Internet naquele momento. O espião pode simplesmente conseguir acesso a registros que ficam armazenados em dispositivos da infraestrutura da rede, internos ao ISP, por exemplo. Ou então, acessar dados mais ricos, registros de utilização de um serviço como uma rede social, mensageiro instantâneo ou e-mail.
