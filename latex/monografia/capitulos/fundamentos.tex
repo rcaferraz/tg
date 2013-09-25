@@ -48,37 +48,36 @@ Essa agenda é armazenada em servidores conhecidos como Servidor DNS (\emph{Domai
 
 Quando digitamos apenas um nome como \emph{www.youtube.com} na página de endereços, por padrão nos é apresentada a sua página inicial. No entanto, podemos querer acessar uma página (ou recurso) específica. Se acessarmos \emph{www.youtube.com/watch?v=b-gG5qmXFUA} estamos pedindo ao Youtube o recurso "/watch?v=b-gG5qmXFUA". Então nosso navegador fica encarregado de consultar um servidor DNS, transformar o nome \emph{www.youtube.com} em um endereço IP, e mandar um pacote para este IP pedindo o recurso "/watch?v=b-gG5qmXFUA". Por ser possível acessar recursos de servidores, estes endereços WWW muitas vezes são chamados de URL (\emph{Universal Resource Location}).
 
-\section{Conceitos básicos}
+\section{Algumas definições}
 
 %Fonte: http://www.ptt.br/documentacao
 
 \paragraph*{Provedor de Acesso Serviços e Informações da Rede Internet (Internet Service Provider - ISP).}
-	Garante que um indivíduo tenha acesso a toda a Internet e, para o caso de provedores de conteúdo, garantir que outros usuários possam visualizar seus serviços disponibilizados na rede.
+	Garante que um indivíduo tenha acesso a toda a Internet e, para o caso de provedores de conteúdo, garantir que outros usuários possam visualizar seus serviços disponibilizados na rede. Exemplos: GVT, Oi.
 	
-\paragraph*{Autonomous Systems (ASs).}
-	Todo ISP possui uma rede e caso esta rede possa adotar suas próprias políticas de administração de rede e seja registrada na LACNIC, ele terá responsabilidade pela sua rede e passará a ser um AS (Autonomous System), com um ASN (Autonomous System Number) que o identificará.
+%\paragraph*{Autonomous Systems (ASs).}
+%	Todo ISP possui uma rede e caso esta rede possa adotar suas próprias políticas de administração de rede e seja registrada na LACNIC, ele terá responsabilidade pela sua rede e passará a ser um AS (Autonomous System), com um ASN (Autonomous System Number) que o identificará.
 
 \paragraph*{Peering.}
-	Para um cliente de um AS poder acessar o conteúdo de um cliente de outro AS, é necessário que exista uma conexão entre estes AS. Uma conexão direta entre os ASs é chamada de peering.
+	Para um cliente de um ISP poder acessar o conteúdo de um cliente de outro ISP, é necessário que exista uma conexão entre estes ISPs. Uma conexão direta entre os ISPs é chamada de peering.
 
 \paragraph*{Trânsito.}
-	Uma forma de um AS fornecer acesso a vários outros ASs para seus clientes, seria fazer Peering com todos os outros ASs. No entanto há mais de 10000 ASs independentes no mundo, então torna-se inviável que um AS se conecte diretamente a todos os outros.
+	Uma forma de um ISP fornecer acesso a vários outros ISPs para seus clientes, seria fazer Peering com todos os outros ISPs. No entanto há mais de 10000 ISPs independentes no mundo, então torna-se inviável que um ISP se conecte diretamente a todos os outros.
 
-	Caso uma rede AS1 queira se conectar com outra rede AS2, não é necessário que crie um peering (conexão direta) entre elas. A rede AS1 pode negociar com uma terceira rede AS3, que já possui Peering com a AS2, e pedir para usar a rede AS3 para ganhar acesso a AS2. O uso de uma ou várias redes ASs para alcançar uma rede destino é chamada de trânsito.
+	Caso a rede do ISP1 queira se conectar com a rede do ISP2, não é necessário que crie um peering (conexão direta) entre elas. A rede do ISP1 pode negociar com uma terceira rede ISP3, que já possui Peering com a ISP2, e pedir para usar a rede ISP3 para ganhar acesso a ISP2. O uso de uma ou várias redes ISPs para alcançar uma rede destino é chamada de trânsito.
 
 \paragraph*{Tier One peer.}
-	Poucos ASs no mundo tem acesso a toda a Internet, mas não pagam por "trânsito" a nenhum outro ISP. Eles fazem "peering" com todos os "tier one" e vendem trânsito para os outros ISPs (ASs menores).
+	Alguns ISPs no mundo tem acesso a toda a Internet, mas não pagam por "trânsito" a nenhum outro ISP. Eles são chamados de "Tier One" e fazem "peering" entre si, para vender trânsito para os outros ISPs (ISPs menores).
 
 	Portanto, para ter acesso a toda a Internet, ou o seu ISP ou um de seus "up-stream provider" terá conexão com pelo menos um "tier one".
 
 \paragraph*{Peering privado e Ponto de Troca de Tráfego.}
-	Se você não for um Tier One, obrigatoriamente terá que pagar por trânsito a algum outro AS para ter acesso a toda a Internet. No entanto, se você possuir Peering com algum AS, você economiza, pois esta conexão não passa por nenhum atravessador e você não precisa pagar por ela, apenas o custo de manutenção do link. Portanto, peering é de interesse de qualquer AS, pequeno ou grande.
+	Se você não for um Tier One, obrigatoriamente terá que pagar por trânsito a algum outro ISP para ter acesso a toda a Internet. No entanto, se você possuir Peering com algum ISP, você economiza, pois esta conexão não passa por nenhum atravessador e você não precisa pagar por ela, apenas o custo de manutenção do link. Portanto, peering é de interesse de qualquer ISP, pequeno ou grande.
 
-	Peering pode ser feito um a um, via interconexão direta (peering privado) ou através de um ponto de troca de tráfego (PTT), um local com uma infraestrutura compartilhada, onde os ISPs se juntam para interconectar suas redes. No caso, cada ISP pagará pelo uso dessa infraestrutura, mas não estarão pagando por trânsito, uma vez que estão conectados diretamente aos ASs que participam deste PTT.
+	Peering pode ser feito um a um, via interconexão direta (peering privado) ou através de um ponto de troca de tráfego (PTT), um local com uma infraestrutura compartilhada, onde os ISPs se juntam para interconectar suas redes. No caso, cada ISP pagará pelo uso dessa infraestrutura, mas não estarão pagando por trânsito, uma vez que estão conectados diretamente aos ISPs que participam deste PTT.
 
 	Idealmente, existe no máximo um PTT em uma metrópole.
 
 \paragraph*{Ponto de Troca de Tráfego (PTT) ou Internet Exchange Point (IXP).}
-	Infraestrutura necessária para a interconexão direta entre as redes (Autonomous Systems -  ASSs).
-
+	Infraestrutura necessária para a interconexão direta entre as redes de diferentes ISPs.
 
