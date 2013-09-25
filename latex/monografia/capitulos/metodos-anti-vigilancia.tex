@@ -1,64 +1,85 @@
 \chapter{Métodos para contornar vigilância e censura na Internet} \label{cap:MetodosAnti}
 
+Para vencer a censura, basicamente o que se deve fazer é utilizar ferramentas que possibilitem a conexão com servidores bloqueados pelo governo. Se o bloqueio do governo for completo, ou seja, não envolver apenas alteração de servidores DNS, mas também o bloqueio do IP dos servidores, a resposta para isso é simples: \emph{Proxy}.
+
 \section{Proxy}
 
-Um proxy funciona como um entregador terceirizado.
+Um proxy funciona como um entregador terceirizado. Você estabelece comunicação com uma máquina escolhida por você e todas as suas requisições partirão daquela máquina. Como se você estivesse sentado em frente a ela, acessando a Web. Se você estiver na China e acessar a Web através de um proxy num país vizinho, você não será afetado pela censura empregada na China, pois sua navegação funcionará como se você estivesse naquele país vizinho.
 
-Existe ainda a possibilidade de usar proxies múltiplos. Em fóruns de discussão na Internet, quando alguns usuários que conhecem estas técnicas são ameaçados de serem processados por algum motivo, às vezes respondem com uma frase clássica ``I'm behind seven proxies'', ou na forma de uma imagem resposta, como na figura \ref{fig_sevenproxies}.
+No entanto, governos podem criar obstáculos para utilização de proxies. Em primeiro lugar, países que queiram implantar censura, em geral têm na sua lista de IPs bloqueados não só os provedores de conteúdo, mas também servidores que funcionam como proxy. E se o IP do proxy está bloqueado, não haverá como utilizá-lo, naturalmente. Em segundo lugar, o governo pode deixar intencionalmente alguns proxies abertos apenas com a intenção
+
+Há mais de uma forma de utilizar Proxies. Web Proxies são páginas acessíveis através de navegadores comuns, que possuem um campo para o usuário digitar o endereço que quer acessar. A página é então requisitada por este servidor, e exibida ao usuário \emph{dentro} da mesma página que possui o campo do endereço. Um exemplo de Web Proxy encontra-se na Figura \ref{fig_phproxy}.
+
+Há também o HTTP Proxy e o SOCKS Proxy. Para utilizar esses, é necessário conhecer o IP e Porta deles e configurar o seu navegador, ou aplicação como \emph{Skype}, por exemplo, para utilizá-los. HTTP Proxies servem apenas para navegação. Já os SOCKS Proxies servem para outras aplicações. A Figura \ref{fig_idcloak} mostra uma página com uma lista de proxies SOCKS.
+
+Estas soluções, no entanto, não são ideais para o caso de se estar sendo vigiado. Para descobrir com quem o usuário se comunica, bastaria instalar uma escuta com o objetivo de monitorar o proxy que o usuário utiliza. Para isso existem as redes de anonimidade, que são métodos mais sofisticados de burlar censura e vigilância. O \emph{Tor}, por exemplo, é uma rede de voluntários que ao executarem o programa, podem optar por servir como intermediários para outros usuários. No momento em que se inicia o Tor, são escolhidos três voluntários para servirem como intermediários na comunicação, como se fossem uma sequência de proxies. Esses intermediários se comunicam utilizando criptografia e os protocolos foram projetados para nenhum deles poderem identificar ao mesmo tempo ambos os envolvidos na comunicação. O primeiro intermediário conhece apenas o remetente, mas não conhece o destinatário, sabe apenas que deve encaminhar para o segundo intermediário. Já o segundo não conhece nem o remetente, nem o destinatário, apenas sabe que deve reencaminhar para o terceiro, que por sua vez conhece o destinatário, mas nunca saberá quem é o remetente.
+
+Existem outras soluções com propósitos parecidos, como o \emph{I2P}.
 
 \begin{figure}[ht]
 \begin{center}
 %Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
-\scalebox{0.5}{\includegraphics[bb=0 0 973 612]{imagens/sevenproxies.pdf}}
+\scalebox{0.7}{\includegraphics[bb=0 0 973 612]{imagens/phproxy.pdf}}
 \end{center}
-\caption[Imagem resposta com o texto I'm behind seven proxies]{Esta expressão surgiu quando alguns hackers mal intencionados invadiram o computador de uma mulher e postaram vídeos e fotos suas em um fórum de discussão chamado \emph{4chan}. Quando descobriu, a mulher foi a este fórum ameaçar que iria denunciar os hackers às autoridades. Foi aí que um deles respondeu com ``Boa sorte! Estou por trás de sete proxies!'', significando que seria praticamente impossível localizá-lo. Mais informações sobre esta frase que acabou se tornando um \emph{meme} encontra-se em: \url{http://knowyourmeme.com/memes/good-luck-im-behind-7-proxies} } \label{fig_sevenproxies}
+\caption[Captura de tela de um navegador acessando um Proxy Web]{Legenda imagem PHProxy} \label{fig_phproxy}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+%Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
+\scalebox{0.7}{\includegraphics[bb=0 0 973 612]{imagens/idcloak.pdf}}
+\end{center}
+\caption[Captura de tela de uma página com uma lista de proxies SOCKS]{Legenda imagem idcloak} \label{fig_idcloak}
 \end{figure}
 
 
 
-\subsection{Proxies múltiplos}
+%Existe ainda a possibilidade de usar proxies múltiplos. Em fóruns de discussão na Internet, quando alguns usuários que conhecem estas técnicas são ameaçados de serem processados por algum motivo, às vezes respondem com uma frase clássica ``I'm behind seven proxies'', ou na forma de uma imagem resposta, como na figura \ref{fig_sevenproxies}.
 
-\subsubsection{Proxies encadeados}
+%\begin{figure}[ht]
+%\begin{center}
+%Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
+%\scalebox{0.5}{\includegraphics[bb=0 0 973 612]{imagens/sevenproxies.pdf}}
+%\end{center}
+%\caption[Imagem resposta com o texto I'm behind seven proxies]{Esta expressão surgiu quando alguns hackers mal intencionados invadiram o computador de uma mulher e postaram vídeos e fotos suas em um fórum de discussão chamado \emph{4chan}. Quando descobriu, a mulher foi a este fórum ameaçar que iria denunciar os hackers às autoridades. Foi aí que um deles respondeu com ``Boa sorte! Estou por trás de sete proxies!'', significando que seria praticamente impossível localizá-lo. Mais informações sobre esta frase que acabou se tornando um \emph{meme} encontra-se em: \url{http://knowyourmeme.com/memes/good-luck-im-behind-7-proxies} } \label{fig_sevenproxies}
+%\end{figure}
 
-\subsubsection{Proxies em paralelo}
+%\subsection{Tor}
 
-\subsection{Tor}
+%O Tor é classificado por alguns como uma ferramenta de proxy. Na verdade ele utiliza o conceito de proxies, mas aumenta um pouco a complexidade para agregar valores que o Proxy por si só não traz.
 
-O Tor é classificado por alguns como uma ferramenta de proxy. Na verdade ele utiliza o conceito de proxies, mas aumenta um pouco a complexidade para agregar valores que o Proxy por si só não traz.
+%O Tor serve para despistar alguém que queira descobrir com quem você se comunica e o que você transmite e recebe pela Internet. Seguindo a analogia da seção \ref{sec:AnalogiaServicoPostal} na página \pageref{sec:AnalogiaServicoPostal}, é como se você continuasse usando o serviço postal, mas criptografasse suas mensagens e contratasse secretamente pessoas para servirem como intermediários. Ou seja, se você deseja enviar uma encomenda a alguém em Manaus, você deve primeiro estabelecer o canal de envio. O canal de envio é formado por três intermediários. Um serve para receber seus dados e reencaminhar para o segundo, que reencaminha para o terceiro e esse envia finalmente para o destinatário. Este canal é formado pedindo a um intermediário (chamado de \emph{relay}) que encontra-se numa lista de voluntários, para servir como nó de entrada do novo canal. Este nó por sua vez, procura um outro voluntário para servir como o \emph{relay} do meio. O \emph{relay} do meio então procura o último voluntário, que servirá como nó de saída.  para seu parceiro intermediário em São Paulo, que já sabe que deve reenviar para um outro intermediário em Florianópolis, que por sua vez envia para outro intermediário em Fortaleza, que finalmente envia para o seu destinatário em Recife. Um detalhe importante é que todos esses intermediários trabalham para várias outras pessoas. Ou seja, assim que sua encomenda chega no primeiro intermediário, alguém que estiver vigiando sua comunicação com este intermediário, não saberá quais dos pacotes que ele reenviou é o seu, pois são muitos pacotes que saem dele.
 
-O Tor serve para despistar alguém que queira descobrir com quem você se comunica e o que você transmite e recebe pela Internet. Seguindo a analogia da seção \ref{sec:AnalogiaServicoPostal} na página \pageref{sec:AnalogiaServicoPostal}, é como se você continuasse usando o serviço postal, mas criptografasse suas mensagens e contratasse secretamente pessoas para servirem como intermediários. Ou seja, se você deseja enviar uma encomenda a alguém em Manaus, você deve enviar primeiro para seu parceiro intermediário em São Paulo, que já sabe que deve reenviar para um outro intermediário em Florianópolis, que por sua vez envia para outro intermediário em Fortaleza, que finalmente envia para o seu destinatário em Recife. Um detalhe importante é que todos esses intermediários trabalham para várias outras pessoas. Ou seja, assim que sua encomenda chega no primeiro intermediário, alguém que estiver vigiando sua comunicação com este intermediário, não saberá quais dos pacotes que ele reenviou é o seu, pois são muitos pacotes que saem dele.
+%..entrar em mais detalhes técnicos..
 
-..entrar em mais detalhes técnicos..
+%O Tor tem alguns defeitos. Caso você e seu destinatário estejam sendo monitorados, é possível determinar se vocês estão se comunicando, através de uma análise estatística.
 
-O Tor tem alguns defeitos. Caso você e seu destinatário estejam sendo monitorados, é possível determinar se vocês estão se comunicando, através de uma análise estatística.
+%Outro problema é que o IP dos \emph{relays} é uma informação pública e facilmente pode-se bloqueá-los. A criação dos chamados \emph{bridges} foi uma tentativa de solucionar isso. Também é desvantajoso o fato de ser necessário fazer um download para poder aproveitar esta técnica. Se o governo bloquear os sites que oferecem o Tor para download, o cidadão terá dificuldades para conseguí-lo e utilizá-lo.
 
-Outro problema é que o IP dos \emph{relays} é uma informação pública e facilmente pode-se bloqueá-los. A criação dos chamados \emph{bridges} foi uma tentativa de solucionar isso. Também é desvantajoso o fato de ser necessário fazer um download para poder aproveitar esta técnica. Se o governo bloquear os sites que oferecem o Tor para download, o cidadão terá dificuldades para conseguí-lo e utilizá-lo.
+%..citar bloqueio aos relays na china e a criação de bridges..
 
-..citar bloqueio aos relays na china e a criação de bridges..
+%..citar notícias recentes sobre tor..
 
-..citar notícias recentes sobre tor..
+%FBI admits what we all suspected: it compromised freedom hosting's Tor Servers.
+%\url{http://arstechnica.com/tech-policy/2013/09/fbi-admits-what-we-all-suspected-it-compromised-freedom-hostings-tor-servers/}
 
-FBI admits what we all suspected: it compromised freedom hosting's Tor Servers.
-\url{http://arstechnica.com/tech-policy/2013/09/fbi-admits-what-we-all-suspected-it-compromised-freedom-hostings-tor-servers/}
+%\subsection{Tor+SSL}
 
-\subsection{Tor+SSL}
+%\subsection{Freenet}
 
-\lipsum[1]
+%https://freenetproject.org/
 
-\subsection{Freenet}
+%\subsection{Freegate}
 
-https://freenetproject.org/
+%http://www.dit-inc.us/freegate
 
-\subsection{Freegate}
+%\subsection{I2P}
 
-http://www.dit-inc.us/freegate
-
-\subsection{I2P}
-
-\lipsum[1]
+%\lipsum[1]
 
 \section{Acesso via satélite}
 
+Uma possível forma de combater censura em qualquer país é oferecer acesso à Internet via satélite. Nesse caso, o usuário não dependerá da infraestrutura de seu país. Em \cite{hacksatellites} \emph{Hackers} demonstram esforços para alcançar isso.
 ..Citar projetos de hackers para criar satélites para acabar com censura na Internet em alguns países \url{http://www.bbc.co.uk/news/technology-16367042}...
 
 \section{Esteganografia}
