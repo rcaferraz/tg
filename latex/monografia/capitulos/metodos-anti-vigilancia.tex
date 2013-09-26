@@ -4,15 +4,15 @@ Para vencer a censura, basicamente o que se deve fazer é utilizar ferramentas qu
 
 \section{Proxy}
 
-Um proxy funciona como um entregador terceirizado. Você estabelece comunicação com uma máquina escolhida por você e todas as suas requisições partirão daquela máquina. Como se você estivesse sentado em frente a ela, acessando a Web. Se você estiver na China e acessar a Web através de um proxy num país vizinho, você não será afetado pela censura empregada na China, pois sua navegação funcionará como se você estivesse naquele país vizinho.
+Um \emph{proxy} funciona como um entregador terceirizado. Você estabelece comunicação com uma máquina escolhida por você e todas as suas requisições partirão daquela máquina. Como se você estivesse sentado em frente a ela, acessando a Web. Se você estiver na China e acessar a Web através de um \emph{proxy} num país vizinho, você não será afetado pela censura empregada na China, pois sua navegação funcionará como se você estivesse naquele país vizinho.
 
-No entanto, governos podem criar obstáculos para utilização de proxies. Em primeiro lugar, países que queiram implantar censura, em geral têm na sua lista de IPs bloqueados não só os provedores de conteúdo, mas também servidores que funcionam como proxy. E se o IP do proxy está bloqueado, não haverá como utilizá-lo, naturalmente. Em segundo lugar, o governo pode deixar intencionalmente alguns proxies abertos apenas com a intenção
+No entanto, governos podem criar obstáculos para utilização de \emph{proxies}. Em primeiro lugar, países que queiram implantar censura, em geral têm na sua lista de IPs bloqueados não só os provedores de conteúdo proibido, mas também servidores que funcionam como \emph{proxy}. E se o IP do \emph{proxy} está bloqueado, não haverá como utilizá-lo, naturalmente. Em segundo lugar, o governo pode deixar intencionalmente alguns \emph{proxies} abertos pelo próprio governo, apenas com a intenção de atrair usuários e monitorar suas ações.
 
 Há mais de uma forma de utilizar Proxies. Web Proxies são páginas acessíveis através de navegadores comuns, que possuem um campo para o usuário digitar o endereço que quer acessar. A página é então requisitada por este servidor, e exibida ao usuário \emph{dentro} da mesma página que possui o campo do endereço. Um exemplo de Web Proxy encontra-se na Figura \ref{fig_phproxy}.
 
-Há também o HTTP Proxy e o SOCKS Proxy. Para utilizar esses, é necessário conhecer o IP e Porta deles e configurar o seu navegador, ou aplicação como \emph{Skype}, por exemplo, para utilizá-los. HTTP Proxies servem apenas para navegação. Já os SOCKS Proxies servem para outras aplicações. A Figura \ref{fig_idcloak} mostra uma página com uma lista de proxies SOCKS.
+Há também o HTTP Proxy e o SOCKS Proxy. Para utilizar esses, é necessário conhecer o IP e Porta deles e configurar o seu navegador, ou aplicação como \emph{Skype}, por exemplo, para utilizá-los. HTTP Proxies servem apenas para navegação. Já os SOCKS Proxies servem para outras aplicações. A Figura \ref{fig_idcloak} mostra uma página com uma lista de \emph{proxies} SOCKS.
 
-Estas soluções, no entanto, não são ideais para o caso de se estar sendo vigiado. Para descobrir com quem o usuário se comunica, bastaria instalar uma escuta com o objetivo de monitorar o proxy que o usuário utiliza. Para isso existem as redes de anonimidade, que são métodos mais sofisticados de burlar censura e vigilância. O \emph{Tor}, por exemplo, é uma rede de voluntários que ao executarem o programa, podem optar por servir como intermediários para outros usuários. No momento em que se inicia o Tor, são escolhidos três voluntários para servirem como intermediários na comunicação, como se fossem uma sequência de proxies. Esses intermediários se comunicam utilizando criptografia e os protocolos foram projetados para nenhum deles poderem identificar ao mesmo tempo ambos os envolvidos na comunicação. O primeiro intermediário conhece apenas o remetente, mas não conhece o destinatário, sabe apenas que deve encaminhar para o segundo intermediário. Já o segundo não conhece nem o remetente, nem o destinatário, apenas sabe que deve reencaminhar para o terceiro, que por sua vez conhece o destinatário, mas nunca saberá quem é o remetente.
+Estas soluções, no entanto, não são ideais para o caso de se estar sendo vigiado. Para descobrir com quem o usuário se comunica, bastaria instalar uma escuta com o objetivo de monitorar o \emph{proxy} que o usuário utiliza. Para isso existem as redes de anonimidade, que são métodos mais sofisticados de burlar censura e vigilância. O \emph{Tor}, por exemplo, é uma rede de voluntários que ao executarem o programa, podem optar por servir como intermediários para outros usuários. No momento em que se inicia o Tor, são escolhidos três voluntários para servirem como intermediários na comunicação, como se fossem uma sequência de \emph{proxies}. Esses intermediários se comunicam utilizando criptografia e os protocolos foram projetados para nenhum deles poder identificar ao mesmo tempo ambos os envolvidos na comunicação: remetente e destinatário. O primeiro intermediário conhece apenas o remetente, mas não conhece o destinatário, sabe apenas que deve encaminhar para o segundo intermediário. Já o segundo não conhece nem o remetente, nem o destinatário, apenas sabe que deve reencaminhar para o terceiro, que por sua vez conhece o destinatário, mas nunca saberá quem é o remetente.
 
 Existem outras soluções com propósitos parecidos, como o \emph{I2P}.
 
@@ -21,7 +21,7 @@ Existem outras soluções com propósitos parecidos, como o \emph{I2P}.
 %Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
 \scalebox{0.7}{\includegraphics[bb=0 0 973 612]{imagens/phproxy.pdf}}
 \end{center}
-\caption[Captura de tela de um navegador acessando um Proxy Web]{Legenda imagem PHProxy} \label{fig_phproxy}
+\caption[Captura de tela de um navegador acessando um Proxy Web]{Nesta página é possível observar um campo para endereços, no caso preenchido com a URL da página inicial do \emph{Google}. Logo abaixo há algumas opções a serem configuradas pelo usuário. Assim que o usuário clica em ``Go'', a página será atualizada, substituindo a área com as opções de configuração pela página do \emph{Google} requisitada pelo usuário.} \label{fig_phproxy}
 \end{figure}
 
 \begin{figure}[ht]
@@ -29,7 +29,7 @@ Existem outras soluções com propósitos parecidos, como o \emph{I2P}.
 %Conversao PNG para PDF usando "convert nomeimagem.png nomeimagem.pdf" no terminal do ubuntu.
 \scalebox{0.7}{\includegraphics[bb=0 0 973 612]{imagens/idcloak.pdf}}
 \end{center}
-\caption[Captura de tela de uma página com uma lista de proxies SOCKS]{Legenda imagem idcloak} \label{fig_idcloak}
+\caption[Captura de tela de uma página com uma lista de \emph{proxies} SOCKS]{Este site tem a intenção de divulgar SOCKS Proxies, para pessoas que estão dentro de redes com alguns serviços censurados como a navegação Web, ou utilização de \emph{messengers}, ou comunicação por voz (e.g. \emph{Skype}). Ao configurar seu navegador, ou \emph{messenger} para utilizar algum desses \emph{proxies}, o usuário fica livre da censura.} \label{fig_idcloak}
 \end{figure}
 
 
@@ -83,19 +83,19 @@ Uma possível forma de combater censura em qualquer país é oferecer acesso à Inte
 
 \section{Esteganografia}
 
-Em situações em que o usuário esteja sendo constantemente vigiado e ou perseguido, ainda é possível transmitir informações sigilosas sem levantar tanta suspeita quanto quando se utiliza criptografia pura. Além disso, em alguns países o uso de criptografia é proibido por lei, então mesmo sem conhecer o conteúdo da mensagem, o governo pode prender o cidadão, por apenas utilizar a criptografia.
+Em situações em que o usuário esteja sendo constantemente vigiado e ou perseguido, ainda é possível transmitir informações sigilosas sem levantar tanta suspeita quanto quando se utiliza criptografia pura -- em alguns casos, o fato de estar usando criptografia já pode ser suficiente para chamar a atenção das autoridades. Além disso, em alguns países o uso de criptografia é proibido por lei, então mesmo sem conhecer o conteúdo da mensagem, o governo pode prender o cidadão, por apenas utilizar a criptografia.
 
 Esteganografia é o nome dado a técnicas de ocultação de mensagens, onde duas mensagens são enviadas através de um mesmo meio, uma com conteúdo qualquer, banal e outra com conteúdo crítico, a ser escondido. A mensagem que se deseja esconder é apresentada de forma não intuitiva ou invisível sem as devidas ferramentas. Ao leitor desavisado, a mensagem lida será apenas uma e será a desimportante ou banal.
 
 O primeiro uso do termo data de 1499, mas o primeiro registro de utilização deste tipo de técnica data de 400 a.C., tratando-se portanto de técnicas seculares, que foram apenas adaptadas para o mundo dos computadores. Entre as diversas técnicas não-digitais, há a utilização de tinta invisível, que só é revelada sob circunstâncias específicas como alto calor, ou luz especial. Portanto, o remetente pode escrever uma lista de compras, por exemplo, usando tinta normal, e nos espaços em branco que sobrarem, escrever com tinta invisível a mensagem a ser escondida. Obviamente o receptor, e apenas ele, deve conhecer a forma de revelar a mensagem. 
 
-No âmbito digital, pode-se por exemplo alterar minimamente o tom de cor de cada pixel de uma imagem. Tais modificações são imperceptíveis para um ser humano, mas são suficientes para guardar um texto inteiro, ou até mesmo uma outra imagem. Para decodificar a mensagem escondida, deve-se utilizar uma ferramenta de extração da mensagem.
+No âmbito digital, pode-se por exemplo alterar minimamente o tom de cor de cada pixel de uma imagem. Tais modificações são imperceptíveis para um ser humano, mas são suficientes para guardar um texto inteiro, ou até mesmo uma outra imagem. Para decodificar a mensagem escondida, deve-se utilizar a ferramenta correta de extração da mensagem.
 
 \subsection{Esteganografia utilizada como apoio à vigilância governamental}
 
 %Fontes http://en.wikipedia.org/wiki/Printer_steganography http://www.pcworld.com/article/118664/article.html
 
-Algumas impressoras, especialmente as coloridas à \emph{laser}, imprimem pontos amarelos praticamente imperceptíveis em todas as páginas, sem consentimento do usuário. Para o usuário desavisado, estes pontos podem ser entendidos como um defeito na impressora, ou característica estranha do papel. No entanto, estes pontos amarelos são posicionados de forma que guardem uma informação valiosa: a marca e o número de série da impressora utilizada. Desta forma, é possível utilizar a informação para rastrear o dono da impressora e possivelmente quem imprimiu um certo documento. Esta tecnologia foi implementada por grandes companhias como a Xerox, Canon e várias outras, motivados pela preocupação de alguns governos, de que estas impressoras fossem utilizadas para falsificar dinheiro.
+Algumas impressoras, especialmente as coloridas à \emph{laser}, imprimem pontos amarelos praticamente imperceptíveis em todas as páginas, sem consentimento do usuário. Para o usuário desavisado, estes pontos podem ser entendidos como um defeito na impressora, ou característica estranha do papel. No entanto, estes pontos amarelos são posicionados de forma que guardem uma informação valiosa: a marca e o número de série da impressora utilizada. Desta forma, é possível utilizar a informação para rastrear o dono da impressora e possivelmente quem imprimiu um certo documento. Esta tecnologia foi implementada por grandes companhias como a \emph{Xerox}, \emph{Canon} e várias outras, motivados pela preocupação de alguns governos, de que estas impressoras fossem utilizadas para falsificar dinheiro. A \emph{Electronic Frontier Foundation} mantém uma lista de impressoras que foram testadas se possuem esse tipo de tecnologia ou não em \cite{effprinters}.
 
 %\section{Análise comparativa}
 
