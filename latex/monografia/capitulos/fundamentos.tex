@@ -33,7 +33,7 @@ Para tornar possível a comunicação e o entendimento entre diversos tipos de disp
 
 Tudo que é acessível via Internet precisa ter um endereço IP. O Facebook possui um, o Youtube possui outro, e você, para acessá-los, também precisa de um.
 
-Os pacotes trocados via Internet podem transportar vários tipos de dados: o texto de um e-mail, um vídeo do \emph{Youtube}, a senha da sua conta do \emph{Facebook} depois de você clicar em "Entrar", ou seja, tudo que trafega na rede são transformados em zeros e uns e enviados através destes pacotes. Ao chegar no destino, estes zeros e uns são reconvertidos para o tipo de conteúdo original, seja o texto de e-mail ou vídeo do Youtube.
+Os pacotes trocados via Internet podem transportar vários tipos de dados: o texto de um e-mail, um vídeo do \emph{Youtube}, a senha da sua conta do \emph{Facebook} depois de você clicar em ``Entrar'', ou seja, tudo que trafega na rede são transformados em zeros e uns e enviados através destes pacotes. Ao chegar no destino, estes zeros e uns são reconvertidos para o tipo de conteúdo original, seja o texto de e-mail ou vídeo do Youtube.
 
 Logo, quando enviamos um pacote a partir do nosso computador, este pacote acompanha nosso endereço IP, o endereço IP do destinatário e o dado que será recebido por ele. Todas estas informações são lidas por diversos dispositivos que são responsáveis por encaminhar nosso pacote até o destino. Estes dispositivos muitas vezes armazenam todos estes dados por longos períodos.
 
@@ -67,9 +67,9 @@ Quando digitamos apenas um nome como \emph{www.youtube.com} na página de endereç
 	Caso a rede do ISP1 queira se conectar com a rede do ISP2, não é necessário que crie um peering (conexão direta) entre elas. A rede do ISP1 pode negociar com uma terceira rede ISP3, que já possui Peering com a ISP2, e pedir para usar a rede ISP3 para ganhar acesso a ISP2. O uso de uma ou várias redes ISPs para alcançar uma rede destino é chamada de trânsito.
 
 \paragraph*{Tier One peer.}
-	Alguns ISPs no mundo tem acesso a toda a Internet, mas não pagam por "trânsito" a nenhum outro ISP. Eles são chamados de "Tier One" e fazem "peering" entre si, para vender trânsito para os outros ISPs (ISPs menores).
+	Alguns ISPs no mundo tem acesso a toda a Internet, mas não pagam por ``trânsito'' a nenhum outro ISP. Eles são chamados de ``Tier One'' e fazem ``peering'' entre si, para vender trânsito para os outros ISPs (ISPs menores).
 
-	Portanto, para ter acesso a toda a Internet, ou o seu ISP ou um de seus "up-stream provider" terá conexão com pelo menos um "tier one".
+	Portanto, para ter acesso a toda a Internet, ou o seu ISP ou um de seus ``up-stream provider'' terá conexão com pelo menos um ``tier one''.
 
 \paragraph*{Peering privado e Ponto de Troca de Tráfego.}
 	Se você não for um Tier One, obrigatoriamente terá que pagar por trânsito a algum outro ISP para ter acesso a toda a Internet. No entanto, se você possuir Peering com algum ISP, você economiza, pois esta conexão não passa por nenhum atravessador e você não precisa pagar por ela, apenas o custo de manutenção do link. Portanto, peering é de interesse de qualquer ISP, pequeno ou grande.
