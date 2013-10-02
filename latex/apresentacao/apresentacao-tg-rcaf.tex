@@ -56,7 +56,7 @@
 	    \item {\bf Fundamentos}
 	    \item {\bf Censura na Internet}
 	    \item {\bf Vigilância na Internet}
-	    \item {\bf Métodos para contornar vigilância e censura na Internet}
+	    \item {\bf Métodos para contornar censura e vigilância na Internet}
 	    \item {\bf Considerações Finais}
 	\end{itemize}
 
@@ -118,25 +118,35 @@ Censura na Internet
 \subsection{Remoção de conteúdo}
 \begin{frame}
 	\frametitle{Remoção de conteúdo}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Terceirização da censura}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Legitimidade da censura}
+	\begin{itemize}
+	 \item Terceirização da censura
+	 \item Legitimidade da censura
+	 \item Países diferentes, leis diferentes
+	\end{itemize}
 \end{frame}
 
 \subsection{Bloqueio de acesso a conteúdo}
 \begin{frame}
-	\frametitle{DNS Poisoning}
-\end{frame}
-\begin{frame}
-	\frametitle{Filtragem de pacotes: Bloqueio a IPs}
-\end{frame}
-\begin{frame}
-	\frametitle{Filtragem de pacotes: Inspeção automática de conteúdo}
+	\frametitle{Bloqueio de acesso a conteúdo}
+	\begin{columns}
+	  \begin{column}[c]{5cm}
+		\begin{itemize}
+		 \item DNS Poisoning (exemplo: Eleições no Irã)
+		 \pause
+		 \item Filtragem de pacotes
+			\begin{itemize}
+			 \item Bloqueio a IPs
+			 \pause
+			 \item Inspeção automática de conteúdo (exemplo: palavras proibidas na Internet da China)
+			\end{itemize}
+		\end{itemize}
+	  \end{column}
+	  \begin{column}[l]{7cm}
+		\begin{figure}
+		\includegraphics[scale=0.5]{chinagoogle}\\
+		\end{figure}
+	  \end{column}
+	\end{columns}
 \end{frame}
 
 \section{Vigilância na Internet}
@@ -200,10 +210,11 @@ Vigilância na Internet
 	\end{itemize}
 \end{frame}
 
-\section{Métodos anti vigilância e censura}
+\section{Métodos anti censura e vigilância }
 \begin{frame}
-Métodos para contornar vigilância e censura na Internet
+Métodos para contornar censura e vigilância na Internet
 \begin{itemize}
+	\item Criptografia
 	\item Proxy
 	\item Acesso via satélite
 	\item Esteganografia
@@ -213,36 +224,74 @@ Métodos para contornar vigilância e censura na Internet
 \subsection{Proxy}
 \begin{frame}
 	\frametitle{Proxy}
+	\begin{columns}
+	  \begin{column}[c]{5cm}
+		\begin{itemize}
+		 \item Web proxy
+		 \item HTTP proxy
+		 \item SOCKS proxy
+		 \item Redes de anonimidade (exemplo: Tor)
+		\end{itemize}
+  	  \end{column}
+	  \begin{column}[l]{7cm}
+		\begin{figure}
+		\includegraphics[scale=0.3]{webproxy}\\
+		\end{figure}
+	  \end{column}
+	\end{columns}
 \end{frame}
 
 \subsection{Acesso via satélite}
 \begin{frame}
 	\frametitle{Acesso via satélite}
+	Possível solução para censura em alguns países
 \end{frame}
 
 \subsection{Esteganografia}
 \begin{frame}
 	\frametitle{Esteganografia}
+	Possível solução contra vigilância em situações críticas
+	\begin{figure}
+	\includegraphics[scale=0.5]{stega01}\\
+	%Imagem retirada de http://www.steganographypro.com/
+	\end{figure}
 \end{frame}
 
 \section{Considerações finais}
 \begin{frame}
 Considerações finais
-\begin{itemize}
-	\item Relação entre vigilância e censura
-	\item Mercado de software em censura e vigilância
-	\item Trabalhos futuros
-\end{itemize}
+%\begin{itemize}
+%	\item Relação entre vigilância e censura
+%	\item Mercado de software em censura e vigilância
+%	\item Trabalhos futuros
+%\end{itemize}
 \end{frame}
 
 \subsection{Relação entre vigilância e censura}
 \begin{frame}
 	\frametitle{Relação entre vigilância e censura -- Autocensura}
+
+	\begin{figure}
+	\includegraphics[scale=0.5]{watcher}\\
+	\end{figure}
 \end{frame}
 
 \subsection{Mercado de software em censura e vigilância}
 \begin{frame}
 	\frametitle{Empresas que lucram com a censura e a vigilância}
+	\begin{columns}
+	  \begin{column}[c]{5cm}
+		\begin{figure}
+		\includegraphics[scale=0.26]{buggedplanet}\\
+		\end{figure}
+	  \end{column}
+	  \begin{column}[l]{5cm}
+		\begin{figure}
+		\includegraphics[scale=0.26]{bluecoat}\\
+		\end{figure}
+	  \end{column}
+	\end{columns}
+
 \end{frame}
 
 \subsection{Trabalhos futuros}
