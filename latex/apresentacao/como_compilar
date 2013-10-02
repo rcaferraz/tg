@@ -1,0 +1,2 @@
+Transforme o .tex em .pdf usando:
+pdflatex arquivo.tex

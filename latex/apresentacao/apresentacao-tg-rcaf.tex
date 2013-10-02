@@ -1,0 +1,139 @@
+% Author: Rodolfo Ferraz.
+
+% Build this file with pdflatex 01_Intro.tex
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+%\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Métodos governamentais de censura e vigilância na Internet}
+\author{Rodolfo Cesar de Avelar Ferraz}
+\institute{Centro de Informática -- Universidade Federal de Pernambuco}
+
+%\date[PAAP 2011]{Fourth International Symposium on Parallel Architectures, Algorithms and Programming}
+%\pgfdeclareimage[height=0.4cm]{cc}{license}
+%\pgfdeclareimage[height=1.0cm]{logo}{ines}
+%\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+%\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+\logo{\pgfuseimage{logo3}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+	\frametitle{Agenda}
+	\begin{itemize}
+	    \item {\bf Motivação}
+	    \item {\bf Fundamentos}
+	    \item {\bf Censura na Internet}
+	    \item {\bf Vigilância na Internet}
+	    \item {\bf Métodos para contornar vigilância e censura na Internet}
+	    \item {\bf Considerações Finais}
+	\end{itemize}
+
+\end{frame}
+
+\section{Motivação}
+\subsection{Motivação}
+
+\begin{frame}
+	\frametitle{Motivação}
+	\pause
+	  \begin{itemize}
+		\item Great Firewall of China
+		\pause
+		\item Tor
+		\pause
+		\item Cypherpunk
+		\pause
+		\item John Perry Barlow
+	  \end{itemize}
+\end{frame}
+
+\section{Fundamentos}
+\subsection{Fundamentos}
+\begin{frame}
+	\frametitle{Fundamentos}
+	\pause
+	  \begin{itemize}
+		\item O Protocolo IP
+		  \begin{itemize}
+			\item Conteúdo exposto 
+		  \end{itemize}
+		\pause
+		\item Criptografia
+		\pause
+		\item Servidores DNS
+		\pause
+		\item ISPs e suas relações
+		  \begin{itemize}
+			\item Peering
+			\pause
+			\item Trânsito (\$)
+			\pause
+			\item Ponto de Troca de Tráfego (PTT) ou \emph{Internet Exchanging Point} (IXP)
+		  \end{itemize}
+	  \end{itemize}
+\end{frame}
+
+\section{Censura na Internet}
+\begin{frame}
+Censura na Internet
+\end{frame}
+
+
+\subsection{Remoção de conteúdo}
+\begin{frame}
+	\frametitle{Remoção de conteúdo}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Terceirização da censura}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Legitimidade da censura}
+\end{frame}
+
+\subsection{Bloqueio de acesso a conteúdo}
+\begin{frame}
+	\frametitle{DNS Poisoning}
+\end{frame}
+\begin{frame}
+	\frametitle{Filtragem de pacotes: Bloqueio a IPs}
+\end{frame}
+\begin{frame}
+	\frametitle{Filtragem de pacotes: Inspeção automática de conteúdo}
+\end{frame}
+
+
+\end{document}
